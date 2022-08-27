@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:test_app/models/catalog.dart';
 import 'package:test_app/widgets/drawer.dart';
+// ignore: unused_import
 import 'package:test_app/widgets/item_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,13 +49,46 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(16.0),
         // ignore: unnecessary_null_comparison
         child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatalogModel.items.length,
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                ),
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.items[index],
+                  final item = CatalogModel.items[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                        ),
+                        child: Text(
+                          item.name,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      footer: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                        ),
+                        child: Text(
+                          item.price.toString(),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      child: Image.network(
+                        item.image,
+                      ),
+                    ),
                   );
                 },
+                itemCount: CatalogModel.items.length,
               )
             : Center(
                 child: CircularProgressIndicator(),
