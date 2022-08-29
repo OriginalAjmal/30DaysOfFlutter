@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_null_comparison
+// ignore_for_file: unnecessary_null_comparison, deprecated_member_use
 
 import "package:flutter/material.dart";
 import 'package:test_app/models/catalog.dart';
@@ -14,9 +14,9 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.transparent),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -26,7 +26,7 @@ class HomeDetailPage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darlBluishColor),
+                      MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(
                     // ignore: prefer_const_constructors
                     StadiumBorder(),
@@ -50,12 +50,12 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
                       catalog.name.text.xl4
-                          .color(MyTheme.darlBluishColor)
+                          .color(context.accentColor)
                           .bold
                           .make(),
                       catalog.desc.text
