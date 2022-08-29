@@ -37,7 +37,10 @@ class MyTheme {
         // ignore: prefer_const_constructors
         iconTheme: IconThemeData(color: Colors.white),
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
-        titleTextStyle: Theme.of(context).textTheme.headline6,
+        titleTextStyle: Theme.of(context)
+            .textTheme
+            .headline6!
+            .copyWith(color: Colors.white),
       ));
 
   //Colors
