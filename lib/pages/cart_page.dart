@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use, unused_element, no_leading_underscores_for_local_identifiers
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, unused_element, no_leading_underscores_for_local_identifiers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:test_app/core/store.dart';
@@ -38,11 +38,16 @@ class _CartTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$${_cart.totalPrice}"
-              .text
-              .xl5
-              .color(context.theme.accentColor)
-              .make(),
+          VxBuilder(
+            mutations: {RemoveMutation},
+            builder: (context, store, status) {
+              return "\$${_cart.totalPrice}"
+                  .text
+                  .xl5
+                  .color(context.theme.accentColor)
+                  .make();
+            },
+          ),
           30.widthBox,
           ElevatedButton(
             onPressed: () {
@@ -64,6 +69,7 @@ class _CartTotal extends StatelessWidget {
 class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    VxState.watch(context, on: [RemoveMutation]);
     final CartModel _cart = (VxState.store as MyStore).cart;
     return _cart.items.isEmpty
         ? "Nothing To Show".text.xl3.makeCentered()
@@ -72,10 +78,7 @@ class _CartList extends StatelessWidget {
             itemBuilder: ((context, index) => ListTile(
                   leading: Icon(Icons.done),
                   trailing: IconButton(
-                    onPressed: () {
-                      _cart.remove(_cart.items[index]);
-                      //setState(() {});
-                    },
+                    onPressed: () => RemoveMutation(_cart.items[index]),
                     icon: Icon(Icons.remove_circle_outline),
                   ),
                   title: _cart.items[index].name.text.make(),
