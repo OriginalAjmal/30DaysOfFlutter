@@ -1,10 +1,6 @@
 import 'dart:convert';
 
 class CatalogModel {
-  static final catModel = CatalogModel._internal();
-  CatalogModel._internal();
-  factory CatalogModel() => catModel;
-
   static List<Item> items = [];
 
   //Get Item By ID
@@ -22,6 +18,7 @@ class Item {
   final String desc;
   final num price;
   final String color;
+  final String det;
   final String image;
 
   Item({
@@ -30,6 +27,7 @@ class Item {
     required this.desc,
     required this.price,
     required this.color,
+    required this.det,
     required this.image,
   });
 
@@ -39,6 +37,7 @@ class Item {
     required String desc,
     required num price,
     required String color,
+    required String det,
     required String image,
   }) {
     return Item(
@@ -47,6 +46,7 @@ class Item {
       desc: desc,
       price: price,
       color: color,
+      det: det,
       image: image,
     );
   }
@@ -58,6 +58,7 @@ class Item {
       'desc': desc,
       'price': price,
       'color': color,
+      'det': det,
       'image': image,
     };
   }
@@ -72,6 +73,7 @@ class Item {
       desc: map['desc'],
       price: map['price'],
       color: map['color'],
+      det: map['det'],
       image: map['image'],
     );
   }
@@ -82,7 +84,7 @@ class Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, det: $det,image: $image)';
   }
 
   @override
@@ -96,6 +98,7 @@ class Item {
         o.desc == desc &&
         o.price == price &&
         o.color == color &&
+        o.det == det &&
         o.image == image;
   }
 
@@ -106,6 +109,7 @@ class Item {
         desc.hashCode ^
         price.hashCode ^
         color.hashCode ^
+        det.hashCode ^
         image.hashCode;
   }
 }

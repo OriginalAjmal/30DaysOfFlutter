@@ -55,8 +55,7 @@ class HomeDetailPage extends StatelessWidget {
                           .xl
                           .make(),
                       10.heightBox,
-                      "Elitr labore sanctus ea erat erat, gubergren takimata sanctus dolor ea et et. Duo sed at ea sed aliquyam amet labore sea ut. Kasd eos clita sea stet sed eirmod ipsum et tempor. Stet rebum gubergren elitr sea et amet nonumy. Sed accusam sit sea et ut clita. Gubergren dolor justo diam tempor, lorem dolor ea labore takimata lorem dolor. Ipsum ipsum at stet dolore lorem. Diam tempor erat kasd."
-                          .text
+                      catalog.det.text
                           .textStyle(context.captionStyle)
                           .make()
                           .p16()

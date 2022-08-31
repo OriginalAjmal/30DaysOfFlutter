@@ -6,6 +6,7 @@
             "desc": "Apple iPhone 13th Generation",
             "price": 1099,
             "color": "#33505a",
+            "det": "The iPhone 13 Pro Max's stellar cameras, 120Hz ProMotion display and longer battery life add up to a practically perfect phone in our testing. The charging could be faster and Touch ID would be nice, but overall this is a beast that can't be beat. The iPhone 13 Pro Max nails practically every aspect of what makes a smartphone great. This premium flagship (from $1,099) packs a 120Hz refresh rate display, the fastest performance of any handset and epic battery life.",
             "image": "https://www.prismastore.com.cy/images/magictoolbox_cache/cf3e6ec01aac7cb79461bcfe9d0d075e/4/8/4881/thumb0x560/3512020169/iPhone_13_Pro_Max_Alpine_Green_Pure_Back_iPhone_13_Pro_Max_Alpine_Green_Pure_Front_2-up_Screen__USEN.png"
         },
         {
@@ -14,6 +15,7 @@
             "desc": "Google Pixel 6th Generation",
             "price": 899,
             "color": "#00ac51",
+            "det": "Google has once again reclaimed its Android photography crown and goes head-to-head with Apple's best. The Pixel 6 Pro is a powerful and capable phone and Tensor, while somewhat moderate in benchmarks, has some seriously excellent applications. You get a lot with the Pixel 6 Pro. For $899, you get a large 120Hz display, triple rear cameras and a new Tensor chipset, which together make it the bargain rival of phones that cost hundreds more.",
             "image": "https://www.bell.ca/Styles/wireless/GooglePixel6Pro/Google_Pixel-6_Pro_Black_lrg3.png"
         },
         {
@@ -22,6 +24,7 @@
             "desc": "Apple Macbook Air With M2 Chip",
             "price": 1199,
             "color": "#e0bfae",
+            "det": "The MacBook Air M2 is the best laptop for those willing to spend a little bit more for a great laptop. It delivers top-notch performance, over 14 hours of battery life and a bright and colorful display all in a delightfully portable design. The MacBook Air M2 feels truly worthy of the Air name. And I'm not saying that the previous MacBook Air M1 wasn't good. It's just that cramming revolutionary performance in the same old chassis didn't feel like a leap forward to me.",
             "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-silver-select-20220606?wid=1078&hei=730&fmt=png-alpha&.v=1653084303678"
         },
         {
@@ -30,6 +33,7 @@
             "desc": "Sony Playstation 5th Generation",
             "price": 499,
             "color": "#544ee4",
+            "det": "Sony's PS5 has been out for more than a year and a half, and over that tine it's bene refined into a very fine games console. Sure it's design is polarizing and the amount of available storage space isn't huge given the large size of games these days. But with killer haptics from the DualSense controller, immersive 3D audio, and a fast SSD with an expansion slot that's now unlocked for upgrades, the PS5 feels like a truly next-generation games console now",
             "image": "https://static.wikia.nocookie.net/gran-turismo/images/d/d0/Playstation-5-games-console-transparent-background-png-image.png/revision/latest?cb=20201106171401"
         },
         {
@@ -38,6 +42,7 @@
             "desc": "Apple Aipods Pro 1st Generation",
             "price": 249,
             "color": "#e3e4e9",
+            "det": "The AirPods Pro are the wireless earbuds to buy if you want noise cancelling without wearing bulky cans. Priced at a premium $249, you get a lot for your money versus the regular AirPods, including powerful ANC, a customizable fit and sweat- and water-resistance. The design is still bit weird-looking, but Apple has shortened the stems on these earbuds while adding useful gesture controls. Apple crammed in three microphones, a powerful audio driver that feel like magic.",
             "image": "https://assets.stickpng.com/images/60b79e8771a1fd000411f6be.png"
         },
         {
@@ -46,6 +51,7 @@
             "desc": "Apple iPad Pro 2020 Edition",
             "price": 799,
             "color": "#f73984",
+            "det": "The iPad Pro 2021 (12.9-inch) is the best iPad ever if you're willing to splurge. The iPad Pro 2021 (12.9-inch) is faster than any tablet ever, armed with the super-fast M1 processor from the latest Macs, making it ready to crunch video for pros around the world. This iPad Pro's Liquid Retina XDR screen has features none of its rivals can match, getting up to 200% brighter than the competition. Plus, its Center Stage video conferencing trick is quite impressive.",
             "image": "https://res-3.cloudinary.com/grover/image/upload/e_trim/c_limit,f_auto,fl_png8.lossy,h_1280,q_auto,w_1280/v1623317428/dpm4vqn5ahekpbo5ecoe.png"
         },
         {
@@ -54,6 +60,7 @@
             "desc": "Samsung Galaxy S22 Ultra 2022 Edition",
             "price": 1299,
             "color": "#1c1c1c",
+            "det": "This Galaxy S22 Ultra review proves that Samsung knows what power users want. This new beast adds the Galaxy Note's best feature while also offering a ton of other upgrades. Yup, there's an S Pen built in, but there's a lot more going on with this flagship as Samsung tries to top our best phone list. For starters, the S Pen is more responsive, as Samsung made it 70% faster with less latency. The display is also brighter and more colorful than anything we've tested.",
             "image": "https://www.myxprs.com/galaxy-unpacked/images/gallery-ultra-burgundy/back.png"
         },
         {
@@ -62,6 +69,7 @@
             "desc": "Samsung Galaxy Watch 5th Generation",
             "price": 559,
             "color": "#7c95eb",
+            "det": "The Samsung Galaxy Watch 5 Pro is coming for Garmin watches — or, so it seems. As the first Galaxy Watch of its kind, the 5 Pro is hoping to become one of the best GPS watches with features tailored towards outdoor sports enthusiasts. Compared to the Samsung Galaxy Watch 5, the Galaxy Watch 5 Pro has a more durable design, dedicated GPS tools and a longer battery life. It's rated for 80 hours, which is nearly double that of the standard Galaxy Watch 5.",
             "image": "https://media.pocketnow.com/styles/xsmall/public/2022-08/PBI%20Galaxy%20Watch%205%20Sapphire.png?itok=-nmi0Tnz"
         }
     ]
