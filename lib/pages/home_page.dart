@@ -1,15 +1,15 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, no_leading_underscores_for_local_identifiers, unused_local_variable, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:test_app/core/store.dart';
+import 'package:test_app/models/cart.dart';
 import 'dart:convert';
 import 'package:test_app/models/catalog.dart';
 import 'package:test_app/utils/routes.dart';
 import 'package:test_app/widgets/home_widgets/catalog_header.dart';
 import 'package:test_app/widgets/home_widgets/catalog_list.dart';
-// ignore: unused_import
-import 'package:test_app/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,23 +45,33 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
         backgroundColor: context.canvasColor,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          // ignore: deprecated_member_use
-          backgroundColor: context.theme.buttonColor,
-          child: Icon(
-            CupertinoIcons.cart,
-            color: Colors.white,
-          ),
+        floatingActionButton: VxBuilder(
+          mutations: {AddMutation, RemoveMutation},
+          builder: (context, store, status) => FloatingActionButton(
+            onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+            // ignore: deprecated_member_use
+            backgroundColor: context.theme.buttonColor,
+            child: Icon(
+              CupertinoIcons.cart,
+              color: Colors.white,
+            ),
+          ).badge(
+              color: Vx.red500,
+              size: 22,
+              count: _cart.items.length,
+              textStyle: TextStyle(
+                color: context.cardColor,
+                fontWeight: FontWeight.bold,
+              )),
         ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              // ignore: prefer_const_literals_to_create_immutables
               children: [
                 CatalogHeader(),
                 // ignore: unnecessary_null_comparison
