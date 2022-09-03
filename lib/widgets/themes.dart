@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -8,15 +10,11 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.white,
       canvasColor: creamColor,
-      // ignore: deprecated_member_use
       buttonColor: darkBluishColor,
-      // ignore: deprecated_member_use
       accentColor: darkBluishColor,
-      // ignore: prefer_const_constructors
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
-        // ignore: prefer_const_constructors
         iconTheme: IconThemeData(color: Colors.black),
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
         titleTextStyle: Theme.of(context).textTheme.headline6,
@@ -26,15 +24,11 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.black,
       canvasColor: darkCreamColor,
-      // ignore: deprecated_member_use
       buttonColor: lightBluishColor,
-      // ignore: deprecated_member_use
       accentColor: Colors.white,
-      // ignore: prefer_const_constructors
       appBarTheme: AppBarTheme(
         color: Colors.black,
         elevation: 0.0,
-        // ignore: prefer_const_constructors
         iconTheme: IconThemeData(color: Colors.white),
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
         titleTextStyle: Theme.of(context)

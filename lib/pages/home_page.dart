@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, no_leading_underscores_for_local_identifiers, unused_local_variable, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, no_leading_underscores_for_local_identifiers, prefer_const_literals_to_create_immutables, deprecated_member_use, unnecessary_null_comparison
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +25,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // ignore: todo
-    // TODO: implement initState
     super.initState();
     loadData();
   }
@@ -52,18 +50,17 @@ class _HomePageState extends State<HomePage> {
           mutations: {AddMutation, RemoveMutation},
           builder: (context, store, status) => FloatingActionButton(
             onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-            // ignore: deprecated_member_use
             backgroundColor: context.theme.buttonColor,
             child: Icon(
               CupertinoIcons.cart,
               color: Colors.white,
             ),
           ).badge(
-              color: Vx.red500,
+              color: Colors.white,
               size: 22,
               count: _cart.items.length,
               textStyle: TextStyle(
-                color: context.cardColor,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               )),
         ),
@@ -74,7 +71,6 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CatalogHeader(),
-                // ignore: unnecessary_null_comparison
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else
